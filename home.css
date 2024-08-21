@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #021526;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    background-color: #1A2130;
+    height: 5vh;
+    position: fixed;
+    width: 100vw;
+    padding: 10px;
+    z-index: 1;
+    top: 0;
+}
+
+nav ul{
+    display: flex;
+    
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 16px;
+    font-size: 11px;
+}
+
+.left{
+    font-size: 1rem;
+    width: 50%;
+    cursor: pointer;
+    
+}
+
+.left a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li a:hover{
+    
+    transition-timing-function: ease-in;
+
+    font-weight:600 ;
+    border-bottom: solid 3px #b54769;
+}
+
+/* ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #b54769;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: ease-in;
+} */
+
+
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    padding: 70px 0px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+
+
+.firstSection > div{
+    width: 30%;
+    
+}
+
+
+.rightSection img{
+    width: 20vw;
+    margin-top: 40px;
+    margin-left: 30px;
+    
+    
+}
+
+.purple{
+    color: rgb(167, 110, 221);
+    font-weight:600;
+    
+}
+
+
+
+
+#element{
+    color: rgb(167, 110, 221);
+    font-weight:600;
+}
+
+main hr{
+    border: 0;
+    height: 1.1px;
+    margin: 20px 83px;
+    background: rgb(145, 145, 214);
+}
+
+.textGray{
+    color: gray;
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.secondSection{
+    max-width: 80vw ;
+    margin: auto ;
+    }
+
+.secondSection h1{
+    font-size: 1.1rem;
+    margin: 20px 14px;
+
+}
+
+
+.secondSection .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.secondSection .vertical{
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+    text-align: left;
+}
+
+.imageTop{
+    width: 35px;
+    margin-bottom: 5px;
+
+}
+
+.verticalTitle{
+    width: 225px;
+    font-size: 0.8rem;
+    
+}
+
+.verticalDesc{  
+    font-weight: 500;
+    color: gray;
+    font-size: 0.7rem;
+}
+
+.container{
+    padding: 10px 10%;
+    display: flex;
+
+
+}
+
+#about{
+    padding: 80px 0px 0px;
+    color:white ;
+    height: 100vh;
+    margin: auto ;
+    margin: 20px 0 0;
+    
+    
+}
+
+.row{
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+}
+
+.about-col-1{
+    flex-basis: 25vw;
+}
+
+#aboutImg{
+    width: 20vw;
+}
+
+.about-col-2{
+    flex-basis: 50vw;
+}
+
+.sub-title{
+    font-size:1.7rem;
+    font-weight: 600;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 20px;
+}
+
+.tab-titles p{
+    font-size: 18px;
+    font-weight:500;
+    position: relative;
+    border-bottom: solid 2px #ff004f;
+
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0 ;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 16px;
+}
+
+.tab-contents ul li p{
+    color: white;
+    font-size: 12px;
+}
+
+
+
+
+#contact{
+    display: flex;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.contact-left{
+    width: 55vw;
+    padding-top: 50px;
+
+}
+
+.contact-right{
+    width: 30vw;
+
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #b54769;
+    margin-right: 15px;
+    font-size: 23px;
+}
+
+.contact-left a{
+    text-decoration: none;
+    color: white;
+}
+
+.contact-left a :hover{
+    color: blue;
+}
+
+.contact-right img{
+    width: 30vw;
+}
+
+.btn{
+    color: white;
+    background: #b54769;
+    padding: 10px 15px;
+    margin-top: 28px;
+    border-radius: 11px;
+    text-decoration: none;
+    
+}
+
+
+#services{
+    padding: 60px 0;
+
+
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px 0;
+    
+}
+
+.project-title{
+    margin: 30px 125px 10px;
+    font-size:1.7rem;
+    font-weight: 600;
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px ;
+    transition: background 0.5s, transform 0.5s ;
+}
+
+.services-list div i{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #0d45de;
+    font-size: 13px;
+    margin-top:10px ;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A2130;
+    height: 50px;
+
+}
+
+.footer{
+    color: gray;
+    font-size: 10px;
+    
+}
+
+@media screen and (max-width: 1140px)
+{
+ .secondSection .box{
+    display: block;
+
+}
+
+
+
+.firstSection{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 100px;
+    padding: 0;
+
+}
+
+.leftSection {
+    flex: 1;
+    min-width: 300px;
+    /* margin: 20px; */
+}
+
+.rightSection img{
+    width: 40vw;
+    position: relative;
+    left: -50px;
+}
+
+.row{
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.contact-right img{
+    display: none;
+}
+
+#aboutImg{
+    width: 25vw;    
+}
+
+
+
+.left{
+
+    margin: 0 5px;
+
+}
+
+nav ul{
+display: flex;
+justify-content: flex-end;
+margin: 0 10px;
+padding: 0 7px;
+}
+
+}
+
+@media screen and (min-width: 976px){
+
+    #services{
+        height: 100vh;
+        
+    }
+
+
+}
