@@ -174,13 +174,13 @@ main hr{
 }
 
 .container{
-    padding: 10px 10%;
+    padding: 30px 10%;
     display: flex;
 
 
 }
 
-#about{
+/* #about{
     padding: 80px 0px 0px;
     color:white ;
     height: 100vh;
@@ -188,7 +188,7 @@ main hr{
     margin: 20px 0 0;
     
     
-}
+} */
 
 .row{
     display: flex;
@@ -296,7 +296,7 @@ main hr{
 
 
 #services{
-    padding: 60px 0;
+    padding: 10px 0;
 
 
 }
@@ -430,12 +430,3 @@ padding: 0 7px;
 
 }
 
-@media screen and (min-width: 976px){
-
-    #services{
-        height: 100vh;
-        
-    }
-
-
-}

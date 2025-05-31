@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Madhusudan - Frontend Developer, coding Enthusiast</title>
     <link rel="stylesheet" href="home.css" />
+    <script src="https://kit.fontawesome.com/9be6b80ac4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header>
       <nav>
-        <div class="left"><a href="/index.html">My Portfolio</a></div>
+        <div class="left"><a href="#home">My Portfolio</a></div>
         <div class="right">
           <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/project.html">Projects</a></li>
-            <li><a href="/contact.html">Contact Me</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="firstSection">
+      <!-- Home Section -->
+      <section id="home" class="firstSection">
         <div class="leftSection">
           Hi My name is <span class="purple">Madhusudan</span>
           <div>& I'am a passionate</div>
@@ -114,6 +117,96 @@
           </div>
         </div>
       </section>
+      <hr/>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pngs/developer.png" id="aboutImg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="verticalDesc">Hello, my name is Madhusudana . I recently graduated with a Bachelor's degree in Civil Engineering from East West Institute of Technology. During my academic journey, I developed a strong interest in software development, which led me to complete professional training at Jspiders Rajajinagar.
+                    </p>
+                    <p class="verticalDesc">
+                        My technical skills include proficiency in front-end technologies like HTML, CSS, and JavaScript, where I have a good understanding of tags, attributes, selectors, and combinators.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p>Education</p>
+                    </div>
+                    <div class="tab-contents">
+                        <ul>
+                            <li>
+                                <span>BE in Civil Engineering</span><br>
+                                <p>East West Institute of Technology, Bengaluru (2023) - CGPA: 7.01</p>
+                            </li>
+                            <li>
+                                <span>Diploma in Civil Engineering</span><br>
+                                <p>S J B G S Polytechnic, B G Nagara, Nagamangala (2019) - Aggregate: 51%</p>
+                            </li>
+                            <li>
+                                <span>Secondary School Certificate</span><br>
+                               <p>Saint Rita's High School, Kunigal (2015) - Aggregate: 73.60%</p> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <hr/>
+   
+      <!-- Projects Section -->
+      <section id="services">
+        <h1 class="project-title">My Projects</h1>
+        <div class="container">
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Textutil-React</h2>
+                    <p>Textutil is a responsive web application built using React Hooks and crud operations.TextUtil helps to manage and manipulate your text.</p>
+                    <a target="_blank" href="https://rachatmad.github.io/Textutils-React/">View Project</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Spotify clone</h2>
+                    <p>The Spotify Clone project is a web application designed to mimic the core functionalities of Spotify, allowing users to play and control music.The project showcases proficiency in HTML, CSS, and JavaScript to create an interactive and visually appealing user interface.</p>
+                    
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Tictactoe</h2>
+                    <p>This is a simple Tic-Tac-Toe game where two players alternate between marking "X" and "O" on a 3x3 grid. The game detects when a player wins and allows players to reset the board to start a new game.</p>
+                    
+                </div>
+            </div>
+        </div>
+      </section>
+      <hr/>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" ></i>madhupro44@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" ></i>+919743849544</p>
+                    <p><i class="fa-brands fa-linkedin" ></i><a target="_blank" href="https://www.linkedin.com/in/rachat/">linkedin.com/in/rachat</a></p>
+                    <p><i class="fa-brands fa-square-github"></i><a target="_blank" href="https://github.com/RachatMad/">github.com/RachatMad</a></p>
+                    <div>
+                        <button type="button" class="btn"><a href="/Madhusudana c copy.pdf" download  >Download CV</a></button>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <img src="pngs/3d-web.webp" alt="">
+                </div>
+            </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -129,6 +222,31 @@
       var typed = new Typed("#element", {
         strings: ["Frontend Developer", "  Web Designer", "Web Developer "],
         typeSpeed: 50,
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          
+          if (targetSection) {
+            // Adjust offset based on section ID
+            let offset = 70; // Default offset
+            
+            // Special handling for projects section
+            if (targetId === '#services') {
+              offset = 50; /* Increase offset significantly to account for the header and padding */
+            }
+            
+            window.scrollTo({
+              top: targetSection.offsetTop - offset,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     </script>
   </body>
