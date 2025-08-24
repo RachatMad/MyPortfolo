@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A2130]">
+    <footer className="bg-theme-nav border-t border-theme transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Simple Footer Content */}
         <motion.div
@@ -13,7 +13,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-gray-400">
+          <p className="text-theme-secondary">
             © 2025 Madhusudan's Portfolio. 
           </p>
         </motion.div>

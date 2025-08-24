@@ -11,7 +11,7 @@ const Blog = () => {
       company: "Atraya Technologies",
       date: "1 month ago",
       content: "🧩 STATUS: CONTRIBUTOR MODE ACTIVATED 📍 Location: India (Open Source is the new workspace) 📅 Timeline: 15–30 August 2025 🔗 Mission: Collaborate. Contribute. Create. 👾 I'm excited to share that I've been selected as a Contributor for Open Source Connect — one of the country's largest open-source movements, organized by NexFellow",
-      fullContent: "This isn't just a selection. It's a checkpoint in learning journey — where Git meets grit, and contributions speak louder than credentials. A space where students, developers, and changemakers come together to build real solutions for real problems. 🛠️ What makes this different? No grades. No titles. No competition. Just open collaboration. Just creators who code with purpose. Just real impact — shipped publicly. And that's the beauty of it. 🎖️ Badge unlocked – not for display, but as a reminder. 📂 Contributor portal – where ideas turn into action. 👥 Community connection – mentors, admins, peers — all here to build, not compete. 🔍 Next step? To work on projects that don't just get deployed — they get remembered. Because real contribution doesn't end in a pull request — it creates a ripple. 🌱 Grateful to the entire NexFellow and Open Source Connect team for building a space where students can grow, explore, and contribute freely. 💬 To anyone wondering if they're ready for open source: Start small. Ship something. Share it. That's how real learning begins. 🔗 Check out the movement: osconnect.org",
+      fullContent: "This isn't just a selection. It's a checkpoint in learning journey — where Git meets grit, and contributions speak louder than credentials. A space where students, developers, and changemakers come together to build real solutions for real problems. 🛠️ What makes this different? No grades. No titles. No competition. Just open collaboration. Just creators who code with purpose. Just real impact — shipped publicly. And that's the beauty of it. 🎖️ Badge unlocked – not for display, but as a reminder. 📂 Contributor portal — where ideas turn into action. 👥 Community connection — mentors, admins, peers — all here to build, not compete. 🔍 Next step? To work on projects that don't just get deployed — they get remembered. Because real contribution doesn't end in a pull request — it creates a ripple. 🌱 Grateful to the entire NexFellow and Open Source Connect team for building a space where students can grow, explore, and contribute freely. 💬 To anyone wondering if they're ready for open source: Start small. Ship something. Share it. That's how real learning begins. 🔗 Check out the movement: osconnect.org",
       hashtags: ["#OpenSource", "#OSCI", "#Contributor", "#NexFellow", "#FOSS", "#IndiaTech", "#DigitalBharat"],
       likes: 23,
       comments: 2,
@@ -111,15 +111,12 @@ const Blog = () => {
           className="text-center mb-16"
         >
           <h1 className="section-title">Personal Blogs</h1>
-          {/* <p className="text-gray-400 max-w-2xl mx-auto">
-            Sharing my personal journey, achievements, and insights from my software development career.
-          </p> */}
           <div className="mt-6">
             <a
               href="https://www.linkedin.com/in/rachat"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-[#b54769] hover:text-white transition-colors"
+              className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
             >
               <Linkedin size={20} />
               <span>Follow me on LinkedIn</span>
@@ -136,26 +133,26 @@ const Blog = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1A2130] rounded-xl p-6 hover:shadow-2xl transition-all duration-300"
+              className="bg-theme-card rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-theme"
             >
               {/* Post Header */}
               <div className="flex items-start space-x-4 mb-4">
                 {/* Profile Image Placeholder */}
-                <div className="w-12 h-12 bg-[#b54769]/20 rounded-full flex items-center justify-center">
-                  <User size={24} className="text-[#b54769]" />
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                  <User size={24} className="text-primary" />
                 </div>
                 
                 {/* Author Info */}
                 <div className="flex-1">
                   <div className="flex items-center space-x-2 mb-1">
-                    <h3 className="font-semibold text-white">{post.author}</h3>
-                    <span className="text-[#b54769]">•</span>
-                    <span className="text-gray-400 text-sm">{post.date}</span>
+                    <h3 className="font-semibold text-theme">{post.author}</h3>
+                    <span className="text-primary">•</span>
+                    <span className="text-theme-secondary text-sm">{post.date}</span>
                   </div>
-                  <p className="text-gray-300 text-sm">{post.role}</p>
+                  <p className="text-theme-secondary text-sm">{post.role}</p>
                   <div className="flex items-center space-x-2 mt-1">
-                    <Building size={14} className="text-gray-500" />
-                    <span className="text-gray-500 text-sm">{post.company}</span>
+                    <Building size={14} className="text-theme-secondary" />
+                    <span className="text-theme-secondary text-sm">{post.company}</span>
                   </div>
                 </div>
 
@@ -167,15 +164,15 @@ const Blog = () => {
 
               {/* Post Content */}
               <div className="mb-4">
-                <h4 className="text-lg font-semibold text-white mb-3">{post.title}</h4>
-                <p className="text-gray-300 leading-relaxed mb-3">{post.content}</p>
+                <h4 className="text-lg font-semibold text-theme mb-3">{post.title}</h4>
+                <p className="text-theme-secondary leading-relaxed mb-3">{post.content}</p>
                 
                 {/* Show more content on hover/click */}
                 <details className="group">
-                  <summary className="cursor-pointer text-[#b54769] hover:text-white transition-colors text-sm">
+                  <summary className="cursor-pointer text-primary hover:text-primary/80 transition-colors text-sm">
                     Read more...
                   </summary>
-                  <p className="text-gray-300 leading-relaxed mt-3 text-sm">{post.fullContent}</p>
+                  <p className="text-theme-secondary leading-relaxed mt-3 text-sm">{post.fullContent}</p>
                 </details>
               </div>
 
@@ -184,7 +181,7 @@ const Blog = () => {
                 {post.hashtags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="px-2 py-1 bg-[#1A2130]/50 text-[#b54769] text-xs rounded-full border border-[#b54769]/30"
+                    className="px-2 py-1 bg-theme-accent text-primary text-xs rounded-full border border-primary/30"
                   >
                     {tag}
                   </span>
@@ -192,7 +189,7 @@ const Blog = () => {
               </div>
 
               {/* Engagement Stats */}
-              <div className="flex items-center justify-between text-gray-400 text-sm mb-4">
+              <div className="flex items-center justify-between text-theme-secondary text-sm mb-4">
                 <div className="flex items-center space-x-4">
                   <span className="flex items-center space-x-1">
                     <Heart size={14} />
@@ -210,12 +207,12 @@ const Blog = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex space-x-3 pt-4 border-t border-gray-700">
+              <div className="flex space-x-3 pt-4 border-t border-theme">
                 <a
                   href={post.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#b54769] hover:text-white transition-colors"
+                  className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
                 >
                   <Linkedin size={16} />
                   <span className="text-sm">View on LinkedIn</span>
@@ -227,14 +224,14 @@ const Blog = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-gray-400 mb-6">
+          <p className="text-theme-secondary mb-6">
             Want to stay updated with my latest professional insights and achievements?
           </p>
           <a
@@ -246,7 +243,7 @@ const Blog = () => {
             <Linkedin size={20} />
             <span>Connect on LinkedIn</span>
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   )

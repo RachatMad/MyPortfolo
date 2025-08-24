@@ -44,7 +44,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h1 className="section-title">Contact Me</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-theme-secondary max-w-2xl mx-auto">
             I'm always interested in hearing about new opportunities and exciting projects. 
             Feel free to reach out if you'd like to connect!
           </p>
@@ -71,14 +71,14 @@ const Contact = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                                      className="flex items-center space-x-4 p-4 bg-[#1A2130]/50 rounded-lg hover:bg-[#1A2130]/70 transition-all duration-300 group"
+                  className="flex items-center space-x-4 p-4 bg-theme-card rounded-lg hover:bg-theme-accent transition-all duration-300 group border border-theme"
                 >
-                  <div className={`${contact.color} p-3 rounded-lg bg-[#1A2130]/80 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`${contact.color} p-3 rounded-lg bg-theme-accent group-hover:scale-110 transition-transform duration-300`}>
                     <contact.icon size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm font-medium">{contact.label}</p>
-                    <p className="text-white font-medium group-hover:text-primary transition-colors">
+                    <p className="text-theme-secondary text-sm font-medium">{contact.label}</p>
+                    <p className="text-theme font-medium group-hover:text-primary transition-colors">
                       {contact.value}
                     </p>
                   </div>
@@ -94,7 +94,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="pt-6"
             >
-              <h3 className="text-xl font-semibold mb-4 text-white">Resume</h3>
+              <h3 className="text-xl font-semibold mb-4 text-theme">Resume</h3>
               <a
                 href="/Madhusudana c.pdf"
                 download
@@ -113,14 +113,14 @@ const Contact = () => {
               viewport={{ once: true }}
               className="pt-6"
             >
-              <h3 className="text-xl font-semibold mb-4 text-white">Location</h3>
-                              <div className="flex items-center space-x-3 p-4 bg-[#1A2130]/50 rounded-lg">
-                                  <div className="text-[#b54769] p-3 rounded-lg bg-[#1A2130]/80">
+              <h3 className="text-xl font-semibold mb-4 text-theme">Location</h3>
+              <div className="flex items-center space-x-3 p-4 bg-theme-card rounded-lg border border-theme">
+                <div className="text-primary p-3 rounded-lg bg-theme-accent">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-sm font-medium">Location</p>
-                  <p className="text-white font-medium">Bengaluru, Karnataka, India</p>
+                  <p className="text-theme-secondary text-sm font-medium">Location</p>
+                  <p className="text-theme font-medium">Bengaluru, Karnataka, India</p>
                 </div>
               </div>
             </motion.div>
@@ -138,31 +138,11 @@ const Contact = () => {
               <img
                 src="/assets/99AEE550-3AD9-4D47-B255-814515D2C5AF.PNG"
                 alt="Contact"
-                className="w-96 h-96 object-cover rounded-2xl"
+                className="w-96 h-96 object-cover rounded-2xl shadow-lg border border-theme"
               />
             </div>
           </motion.div>
         </div>
-
-        {/* Call to Action */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-400 mb-6">
-            Ready to start a project or have a question?
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-primary"
-          >
-            Let's Talk
-          </motion.button>
-        </motion.div> */}
       </div>
     </div>
   )

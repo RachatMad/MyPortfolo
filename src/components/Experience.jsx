@@ -85,9 +85,6 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h1 className="section-title">Professional Experience</h1>
-          {/* <p className="text-gray-400 max-w-2xl mx-auto">
-            My journey in software development, from training to professional work experience.
-          </p> */}
         </motion.div>
 
         <div className="space-y-12">
@@ -98,90 +95,65 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1A2130] rounded-xl p-8 hover:shadow-2xl transition-all duration-300"
+              className="bg-theme-card rounded-xl p-8 border border-theme hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex flex-col lg:flex-row gap-6">
-                {/* Left Column - Icon and Basic Info */}
-                <div className="lg:w-1/4">
-                  <div className={`${exp.bgColor} ${exp.color} p-6 rounded-lg mb-6 flex justify-center lg:justify-start`}>
-                    <exp.icon size={48} />
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                <div className="flex items-start space-x-4 mb-4 lg:mb-0">
+                  <div className={`${exp.bgColor} p-3 rounded-lg`}>
+                    <exp.icon className={`${exp.color}`} size={24} />
                   </div>
-                  
-                  <div className="space-y-3">
-                    <h3 className="text-2xl font-semibold text-white">{exp.role}</h3>
-                    <div className="flex items-center space-x-2 text-[#b54769]">
-                      <Briefcase size={16} />
-                      <span className="text-sm font-medium">{exp.company}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-gray-400">
-                      <MapPin size={16} />
-                      <span className="text-sm">{exp.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-gray-400">
-                      <Calendar size={16} />
-                      <span className="text-sm">{exp.duration}</span>
+                  <div>
+                    <h3 className="text-xl font-semibold text-theme mb-2">{exp.role}</h3>
+                    <div className="flex items-center space-x-4 text-sm text-theme-secondary">
+                      <span className="flex items-center space-x-1">
+                        <Briefcase size={16} />
+                        <span>{exp.company}</span>
+                      </span>
+                      <span className="flex items-center space-x-1">
+                        <MapPin size={16} />
+                        <span>{exp.location}</span>
+                      </span>
+                      <span className="flex items-center space-x-1">
+                        <Calendar size={16} />
+                        <span>{exp.duration}</span>
+                      </span>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Right Column - Details */}
-                <div className="lg:w-3/4 space-y-6">
-                  <p className="text-gray-300 leading-relaxed text-lg">
-                    {exp.description}
-                  </p>
+              <p className="text-theme-secondary mb-6 leading-relaxed">
+                {exp.description}
+              </p>
 
-                  {/* Responsibilities */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Responsibilities:</h4>
-                    <ul className="space-y-2">
-                      {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="flex items-start space-x-3">
-                          <span className="text-[#b54769] mt-1">•</span>
-                          <span className="text-gray-300">{resp}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <div className="mb-6">
+                <h4 className="font-semibold text-theme mb-3">Key Responsibilities:</h4>
+                <ul className="space-y-2">
+                  {exp.responsibilities.map((responsibility, idx) => (
+                    <li key={idx} className="flex items-start space-x-2 text-theme-secondary">
+                      <span className="text-primary mt-1">•</span>
+                      <span>{responsibility}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                  {/* Technologies */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-[#1A2130]/50 text-gray-300 text-sm rounded-full border border-gray-600 hover:border-[#b54769] transition-colors"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div>
+                <h4 className="font-semibold text-theme mb-3">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-theme-accent text-theme-secondary text-sm rounded-full border border-theme"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Call to Action */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-400 mb-6">
-            Looking for opportunities to grow and contribute to innovative projects?
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary"
-          >
-            Get In Touch
-          </motion.button>
-        </motion.div> */}
       </div>
     </div>
   )

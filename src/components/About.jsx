@@ -52,7 +52,7 @@ const About = () => {
               <img
                 src="/assets/developer.png"
                 alt="Madhusudan"
-                className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
+                className="w-80 h-80 object-cover rounded-2xl shadow-2xl border border-theme"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
             </div>
@@ -67,14 +67,14 @@ const About = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-2xl font-semibold mb-4 text-[#b54769]">
+              <h2 className="text-2xl font-semibold mb-4 text-primary">
                 Hello, I'm Madhusudana
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-theme-secondary leading-relaxed mb-4">
                 I'm a passionate Software Developer with a strong foundation in both frontend and backend technologies. 
                 Currently working at Atraya Technologies, I specialize in creating robust web applications and software solutions.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-theme-secondary leading-relaxed">
                 My expertise includes modern web technologies like React, Node.js, Python, and TypeScript. I'm committed to 
                 writing clean, maintainable code and staying updated with the latest industry trends and best practices.
               </p>
@@ -82,7 +82,7 @@ const About = () => {
 
             {/* Education Section */}
             <div>
-              <h3 className="text-xl font-semibold mb-6 text-white border-b-2 border-[#b54769] pb-2">
+              <h3 className="text-xl font-semibold mb-6 text-theme border-b-2 border-primary pb-2">
                 Education
               </h3>
               <div className="space-y-6">
@@ -93,17 +93,17 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-start space-x-4 p-4 bg-[#1A2130]/50 rounded-lg hover:bg-[#1A2130]/70 transition-colors duration-300"
+                    className="flex items-start space-x-4 p-4 bg-theme-card rounded-lg hover:bg-theme-accent transition-colors duration-300 border border-theme"
                   >
-                    <div className="text-[#b54769] mt-1">
+                    <div className="text-primary mt-1">
                       <edu.icon size={24} />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-white mb-1">{edu.degree}</h4>
-                      <p className="text-gray-400 text-sm mb-1">{edu.institution}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#b54769] text-sm font-medium">{edu.year}</span>
-                        <span className="text-gray-300 text-sm">{edu.grade}</span>
+                      <h4 className="font-semibold text-theme mb-1">{edu.degree}</h4>
+                      <p className="text-theme-secondary text-sm mb-1">{edu.institution}</p>
+                      <div className="flex justify-between items-center text-sm">
+                        <span className="text-theme-secondary">{edu.year}</span>
+                        <span className="text-primary font-medium">{edu.grade}</span>
                       </div>
                     </div>
                   </motion.div>

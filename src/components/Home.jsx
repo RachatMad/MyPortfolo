@@ -88,14 +88,14 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-theme">
               Hi, My name is{' '}
-              <span className="text-[rgb(167,110,221)]">Madhusudan</span>
+              <span className="text-secondary">Madhusudan</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4">
+            <p className="text-xl md:text-2xl text-theme-secondary mb-4">
               & I'm a 
             </p>
-            <div className="text-2xl md:text-3xl font-semibold text-[rgb(167,110,221)] mb-8">
+            <div className="text-2xl md:text-3xl font-semibold text-secondary mb-8">
               <span ref={elementRef}></span>
               <span className="animate-pulse">|</span>
             </div>
@@ -138,11 +138,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <div className="relative">
-              <h2 className="text-5xl font-bold text-white mb-4 relative z-20">
+              <h2 className="text-5xl font-bold text-theme mb-4 relative z-20">
                 Technical Skills
               </h2>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#b54769]/20 via-[#b54769]/10 to-[#b54769]/20 rounded-lg blur-xl -z-10"></div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-[#b54769] via-[#b54769] to-[#b54769] h-1 rounded-full opacity-80"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-lg blur-xl -z-10"></div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-primary via-primary to-primary h-1 rounded-full opacity-80"></div>
             </div>
           </motion.div>
 
@@ -154,7 +154,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Languages</h3>
+            <h3 className="text-2xl font-bold text-theme mb-8 text-center">Languages</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {skills.filter(skill => 
                 ['JavaScript', 'Java', 'Python', 'SQL', 'TypeScript'].includes(skill.name)
@@ -165,14 +165,14 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#1A2130] rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 transition-transform duration-300"
+                  className="bg-theme-card rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 border border-theme"
                 >
                   <div className="text-center">
                     <div className={`${skill.color} mb-4 flex justify-center`}>
                       <skill.icon size={48} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                    <p className="text-gray-400 text-sm">{skill.level}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-theme">{skill.name}</h3>
+                    <p className="text-theme-secondary text-sm">{skill.level}</p>
                   </div>
                 </motion.div>
               ))}
@@ -187,7 +187,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Frameworks & Libraries</h3>
+            <h3 className="text-2xl font-bold text-theme mb-8 text-center">Frameworks & Libraries</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
               {skills.filter(skill => 
                 ['ReactJS', 'Node.js', 'Express.js', 'Flask', 'Material UI', 'Next.js', 'Tailwind CSS', 'Bootstrap'].includes(skill.name)
@@ -198,14 +198,14 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#1A2130] rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 transition-transform duration-300"
+                  className="bg-theme-card rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 border border-theme"
                 >
                   <div className="text-center">
                     <div className={`${skill.color} mb-4 flex justify-center`}>
                       <skill.icon size={48} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                    <p className="text-gray-400 text-sm">{skill.level}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-theme">{skill.name}</h3>
+                    <p className="text-theme-secondary text-sm">{skill.level}</p>
                   </div>
                 </motion.div>
               ))}
@@ -220,7 +220,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Databases</h3>
+            <h3 className="text-2xl font-bold text-theme mb-8 text-center">Databases</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               {skills.filter(skill => 
                 ['MySQL', 'MongoDB (Atlas)'].includes(skill.name)
@@ -231,14 +231,14 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#1A2130] rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 transition-transform duration-300"
+                  className="bg-theme-card rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 border border-theme"
                 >
                   <div className="text-center">
                     <div className={`${skill.color} mb-4 flex justify-center`}>
                       <skill.icon size={48} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                    <p className="text-gray-400 text-sm">{skill.level}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-theme">{skill.name}</h3>
+                    <p className="text-theme-secondary text-sm">{skill.level}</p>
                   </div>
                 </motion.div>
               ))}
@@ -253,7 +253,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Tools & Platforms</h3>
+            <h3 className="text-2xl font-bold text-theme mb-8 text-center">Tools & Platforms</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skills.filter(skill => 
                 ['VS Code', 'Git', 'GitHub', 'GitLab', 'Postman', 'Eclipse', 'MySQL Workbench', 'Cursor', 'Claude Code'].includes(skill.name)
@@ -264,14 +264,14 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#1A2130] rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 transition-transform duration-300"
+                  className="bg-theme-card rounded-xl p-6 hover:shadow-2xl transition-all duration-300 group hover:scale-105 border border-theme"
                 >
                   <div className="text-center">
                     <div className={`${skill.color} mb-4 flex justify-center`}>
                       <skill.icon size={48} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                    <p className="text-gray-400 text-sm">{skill.level}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-theme">{skill.name}</h3>
+                    <p className="text-theme-secondary text-sm">{skill.level}</p>
                   </div>
                 </motion.div>
               ))}

@@ -1,140 +1,129 @@
 # Madhusudan's Portfolio
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
+A modern, responsive portfolio website built with React, Tailwind CSS, and Framer Motion. Features a professional dark/light mode toggle for enhanced user experience.
 
-## 🚀 Features
+## ✨ Features
 
-- **Modern Design**: Clean, professional design with smooth animations
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Component-Based**: Built with React components for maintainability
-- **Smooth Animations**: Framer Motion animations for enhanced user experience
-- **Fast Performance**: Built with Vite for lightning-fast development and builds
-- **Modern Styling**: Tailwind CSS for consistent, beautiful styling
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Dark/Light Mode**: Professional theme switching with smooth transitions
+- **Smooth Animations**: Powered by Framer Motion for engaging interactions
+- **Modern UI/UX**: Clean, professional design with Tailwind CSS
+- **Performance Optimized**: Fast loading and smooth scrolling
+- **SEO Friendly**: Proper meta tags and semantic HTML
 
-## 🛠️ Technologies Used
+## 🎨 Theme System
 
-- **Frontend Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
+The portfolio now includes a sophisticated theme system:
+
+- **Dark Mode**: Professional dark theme (default) with deep blues and grays
+- **Light Mode**: Clean light theme with professional whites and grays
+- **Theme Persistence**: User's theme preference is saved in localStorage
+- **Smooth Transitions**: All color changes include smooth 300ms transitions
+- **Professional Colors**: Carefully selected color palettes for both themes
+
+### Theme Toggle
+- Located in the navigation bar (both desktop and mobile)
+- Sun icon for dark mode, Moon icon for light mode
+- Automatically saves user preference
+
+## 🚀 Technologies Used
+
+- **Frontend**: React 18, Vite
+- **Styling**: Tailwind CSS with custom theme configuration
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **Routing**: React Router DOM
-- **Font**: Poppins (Google Fonts)
+- **Build Tool**: Vite
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd myPortfolo
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
 ## 📁 Project Structure
 
 ```
-portfolio-vite/
-├── public/
-│   ├── assets/          # Images and static assets
-│   └── Madhusudana c.pdf # CV/Resume
-├── src/
-│   ├── components/      # React components
-│   │   ├── Navbar.jsx
-│   │   ├── Home.jsx
-│   │   ├── About.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   ├── App.jsx         # Main app component
-│   ├── main.jsx        # Entry point
-│   └── index.css       # Global styles and Tailwind
-├── tailwind.config.js  # Tailwind configuration
-├── postcss.config.js   # PostCSS configuration
-└── package.json        # Dependencies and scripts
+src/
+├── components/          # React components
+│   ├── About.jsx       # About section
+│   ├── Blog.jsx        # Blog posts section
+│   ├── Contact.jsx     # Contact information
+│   ├── Experience.jsx  # Work experience
+│   ├── Footer.jsx      # Footer component
+│   ├── Home.jsx        # Home/hero section
+│   ├── Navbar.jsx      # Navigation with theme toggle
+│   └── Projects.jsx    # Projects showcase
+├── context/            # React context
+│   └── ThemeContext.jsx # Theme management
+├── assets/             # Static assets
+├── App.jsx            # Main app component
+├── main.jsx           # Entry point
+└── index.css          # Global styles and theme variables
 ```
 
-## 🚀 Getting Started
+## 🎯 Key Components
 
-### Prerequisites
+### ThemeContext
+- Manages dark/light mode state
+- Handles theme persistence in localStorage
+- Provides theme toggle functionality
 
-- Node.js (version 16 or higher)
-- npm or yarn
+### Navbar
+- Responsive navigation with theme toggle
+- Professional theme-aware styling
+- Mobile-friendly hamburger menu
 
-### Installation
+### Theme-Aware Components
+All components now use theme-aware classes:
+- `bg-theme`: Background color
+- `text-theme`: Primary text color
+- `text-theme-secondary`: Secondary text color
+- `bg-theme-card`: Card background color
+- `border-theme`: Border color
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd portfolio-vite
-```
+## 🌟 Customization
 
-2. Install dependencies:
-```bash
-npm install
-```
+### Adding New Themes
+1. Update `tailwind.config.js` with new color schemes
+2. Add CSS variables in `src/index.css`
+3. Extend theme context if needed
 
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open your browser and navigate to `http://localhost:5173`
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` folder.
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-## 🎨 Customization
-
-### Colors
-Edit the `tailwind.config.js` file to customize the color scheme:
-
-```javascript
-colors: {
-  primary: '#b54769',      // Main accent color
-  secondary: '#167, 110, 221', // Secondary accent
-  dark: '#021526',         // Background color
-  darkNav: '#1A2130',      // Navigation background
-}
-```
-
-### Content
-Update the content in each component file:
-- `Home.jsx` - Hero section and skills
-- `About.jsx` - Personal information and education
-- `Projects.jsx` - Project showcase
-- `Contact.jsx` - Contact information
-- `Footer.jsx` - Footer content
-
-### Images
-Replace images in the `public/assets/` folder with your own:
-- `bg.png` - Hero section image
-- `developer.png` - About section image
-- `3d-web.webp` - Contact section image
+### Modifying Colors
+- Primary colors: Update `tailwind.config.js`
+- Theme-specific colors: Modify CSS variables in `index.css`
+- Component-specific colors: Use theme-aware classes
 
 ## 📱 Responsive Design
 
-The portfolio is fully responsive and includes:
-- Mobile-first design approach
-- Responsive navigation with hamburger menu
-- Adaptive grid layouts
-- Optimized typography for all screen sizes
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- Optimized for all screen sizes
+- Touch-friendly interactions
 
-## 🎭 Animations
+## 🚀 Performance Features
 
-Built-in animations using Framer Motion:
-- Fade-in effects on scroll
-- Smooth hover transitions
-- Staggered animations for lists
-- Interactive button animations
-
-## 🔧 Development Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint (if configured)
+- Lazy loading with React.lazy()
+- Optimized images and assets
+- Smooth scrolling and animations
+- Efficient re-renders with proper state management
 
 ## 📄 License
 
@@ -152,4 +141,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-Made with ❤️ using React & Tailwind CSS
+Built with ❤️ using React and modern web technologies.
