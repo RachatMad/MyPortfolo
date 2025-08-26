@@ -11,6 +11,7 @@ const Projects = () => {
       bgColor: 'bg-blue-500/10',
       link: '#',
       github: '#',
+      role: 'Full-Stack Developer',
       technologies: ['ReactJS', 'Material UI', 'Python (Flask)', 'MySQL'],
       category: 'Professional',
       details: [
@@ -29,6 +30,7 @@ const Projects = () => {
       bgColor: 'bg-green-500/10',
       link: '#',
       github: '#',
+      role: 'Full-Stack Developer',
       technologies: ['Vite + React', 'TailwindCSS', 'Python (Flask)', 'MySQL', 'Razorpay'],
       category: 'Professional',
       details: [
@@ -137,6 +139,11 @@ const Projects = () => {
             </span>
           </div>
         </div>
+        {project.role && (
+          <span className="ml-4 px-3 py-1 text-xs font-semibold rounded-full bg-primary/10 text-primary border border-primary/30 self-start">
+            {project.role}
+          </span>
+        )}
       </div>
 
       <p className="text-theme-secondary mb-4 leading-relaxed">
@@ -201,19 +208,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h1 className="section-title">My Projects</h1>
-          <p className="text-theme-secondary max-w-2xl mx-auto">
-            A showcase of my professional work and personal projects, demonstrating my skills in full-stack development, 
-            modern web technologies, and problem-solving abilities.
-          </p>
-        </motion.div>
+
 
         {/* Professional Projects */}
         <motion.div

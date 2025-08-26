@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Code, Database, Globe, Smartphone, Palette, GitBranch, Coffee, Zap, FileText, Server, Terminal, Lightbulb, Layers, Wrench } from 'lucide-react'
 
 const Home = () => {
   const elementRef = useRef(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const strings = ["Software Developer", "Web Developer", "Full Stack Developer"]
@@ -103,9 +105,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
-              onClick={() => {
-                window.location.href = '/contact'
-              }}
+              onClick={() => navigate('/contact')}
             >
               Get In Touch
             </motion.button>
@@ -188,7 +188,7 @@ const Home = () => {
             className="mb-16"
           >
             <h3 className="text-2xl font-bold text-theme mb-8 text-center">Frameworks & Libraries</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center ">
               {skills.filter(skill => 
                 ['ReactJS', 'Node.js', 'Express.js', 'Flask', 'Material UI', 'Next.js', 'Tailwind CSS', 'Bootstrap'].includes(skill.name)
               ).map((skill, index) => (
